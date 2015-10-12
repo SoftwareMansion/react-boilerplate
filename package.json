@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "main": "main.js",
   "dependencies": {
-    "bootstrap-sass": "^3.3.4",
+    "autoprefixer-loader": "^2.1.0",
+    "bootstrap-sass": "^3.3.5",
     "compass-mixins": "^0.12.7",
-    "lodash": "^3.6.0",
+    "lodash": "^3.10.1",
     "react": "^0.13.3",
-    "react-router": "^0.13.3",
     "react-bootstrap": "^0.20.3",
-    "react-style": "^0.5.5",
-    "autoprefixer-loader": "^2.0.0"
+    "react-router": "^0.13.4",
+    "react-style": "^0.5.5"
   },
   "devDependencies": {
     "babel-core": "*",
