@@ -38,7 +38,10 @@ if(process.env.NODE_ENV === 'production') {
       ]
     },
     plugins: [
-      new HtmlWebpackPlugin({ template: __dirname + '/src/index.html' }),
+      new HtmlWebpackPlugin({ 
+        template: __dirname + '/src/index.html',
+        inject: true
+      }),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoErrorsPlugin()
     ]
