@@ -5,7 +5,7 @@ var Router = require('react-router');
 
 var Route = Router.Route;
 
-var HomeScreen = require('./views/HomeScreen');
+var HomeScreen = require('./views/HomeScreen/HomeScreen');
 var RouteNotFoundScreen = require('./views/RouteNotFoundScreen');
 
 var routes = (
