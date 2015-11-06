@@ -4,9 +4,11 @@ var webpack = require('webpack');
 var _ = require('lodash');
 var config;
 
+var mainFile = './src/main.js';
+
 if(process.env.NODE_ENV === 'production') {
   config = {
-    entry: './src/js/main.js',
+    entry: mainFile,
     output: {
       path: __dirname + '/dist/',
       publicPath: '/webassets/'
@@ -27,7 +29,7 @@ if(process.env.NODE_ENV === 'production') {
     entry: [
       'webpack-dev-server/client?http://0.0.0.0:8000',
       'webpack/hot/dev-server',
-      './src/js/main.js'
+      mainFile
     ],
     output: {
       path: __dirname + '/build/',
@@ -59,7 +61,16 @@ _.merge(config, {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/ },
       { test: /\.(eot|gif|jpeg|jpg|png|svg|ttf|woff|woff2)$/, loader: 'url?limit=16384' },
-      { test: /\.scss$/, loaders: ['style', 'css', 'autoprefixer-loader?browsers=last 2 version', 'sass?includePaths[]=' + path.resolve(__dirname, './node_modules/compass-mixins/lib')] },
+      { test: /\.scss$/, loaders: [
+        'style', 
+        'css', 
+        'autoprefixer?browsers=last 2 version', 
+        'sass',
+    ]
+  },
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './node_modules/compass-mixins/lib')
     ]
   },
   externals: {
