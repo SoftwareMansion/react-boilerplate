@@ -66,6 +66,8 @@ _.merge(config, {
         'css', 
         'autoprefixer?browsers=last 2 version', 
         'sass',
+        ]
+      }
     ]
   },
   sassLoader: {
