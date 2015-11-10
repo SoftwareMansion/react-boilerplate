@@ -8,6 +8,6 @@ window.React = React;
 
 React.initializeTouchEvents(true);
 
-Router.run(routes, (Handler, state) => {
+Router.run(routes, (Handler) => {
   React.render(<Handler/>, document.body);
 });
